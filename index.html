@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,213 +9,79 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap" rel="stylesheet">
-    
     <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #0a0a0a;
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #ffffff, #a3a3a3);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        body { font-family: 'Montserrat', sans-serif; background-color: #0a0a0a; }
+        .text-gradient { background: linear-gradient(to right, #ffffff, #a3a3a3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body class="text-gray-200 overflow-x-hidden">
+<body class="text-gray-200 overflow-x-hidden min-h-screen flex flex-col justify-between">
 
     <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-neutral-900 px-6 py-4 flex justify-between items-center">
-        <a href="#" class="text-2xl font-black tracking-widest text-white">DEEJAYRAMOZ</a>
-        <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wider">
-            <a href="#home" class="hover:text-white transition-colors">HOME</a>
-            <a href="#about" class="hover:text-white transition-colors">ABOUT</a>
-            <a href="#music" class="hover:text-white transition-colors">MIXES</a>
-            <a href="#booking" class="bg-white text-black px-4 py-2 rounded-full hover:bg-neutral-200 transition-colors">BOOK NOW</a>
+        <a href="index.html" class="inline-block h-9">
+            <svg viewBox="0 0 350 100" class="h-full w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="5" y="45" font-family="'Montserrat', sans-serif" font-weight="900" font-size="44" fill="#ffffff" letter-spacing="-1">the</text>
+                <rect x="95" y="12" width="130" height="35" fill="#ffffff"/>
+                <text x="5" y="82" font-family="'Montserrat', sans-serif" font-weight="900" font-size="46" fill="#ffffff" letter-spacing="0">Ram</text>
+                <circle cx="165" cy="70" r="14" fill="#ffffff"/>
+                <circle cx="165" cy="70" r="10" fill="#0a0a0a"/>
+                <circle cx="165" cy="70" r="3" fill="#ffffff"/>
+                <path d="M161 63 L169 77" stroke="#0a0a0a" stroke-width="1.5"/>
+                <text x="184" y="82" font-family="'Montserrat', sans-serif" font-weight="900" font-size="46" fill="#ffffff" letter-spacing="0">z</text>
+                <text x="8" y="98" font-family="'Montserrat', sans-serif" font-weight="400" font-size="15" fill="#ffffff" letter-spacing="14">effect</text>
+            </svg>
+        </a>
+        <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wider items-center">
+            <a href="index.html" class="text-white border-b-2 border-white pb-1">HOME</a>
+            <a href="about/index.html" class="hover:text-white transition-colors">ABOUT</a>
+            <a href="mixes/index.html" class="hover:text-white transition-colors">MIXES</a>
+            <a href="book-now/index.html" class="bg-white text-black px-4 py-2 rounded-full hover:bg-neutral-200 transition-colors">BOOK NOW</a>
         </div>
-        <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none">
-            <i class="fa-solid fa-bars"></i>
-        </button>
+        <button id="menu-btn" class="md:hidden text-white text-2xl focus:outline-none"><i class="fa-solid fa-bars"></i></button>
     </nav>
 
     <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-black flex flex-col justify-center items-center space-y-8 text-xl font-bold tracking-widest">
-        <a href="#home" class="mobile-link hover:text-gray-400">HOME</a>
-        <a href="#about" class="mobile-link hover:text-gray-400">ABOUT</a>
-        <a href="#music" class="mobile-link hover:text-gray-400">MIXES</a>
-        <a href="#booking" class="mobile-link bg-white text-black px-6 py-3 rounded-full">BOOK NOW</a>
+        <a href="index.html" class="text-gray-400">HOME</a>
+        <a href="about/index.html" class="hover:text-white">ABOUT</a>
+        <a href="mixes/index.html" class="hover:text-white">MIXES</a>
+        <a href="book-now/index.html" class="bg-white text-black px-6 py-3 rounded-full">BOOK NOW</a>
     </div>
 
-    <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 px-6 bg-cover bg-center" style="background-image: linear-gradient(to top, #0a0a0a, rgba(10,10,10,0.7)), url('YOUR_IMAGE_3_URL_HERE');">
+    <section class="relative flex-grow flex items-center justify-center pt-32 pb-20 px-6 bg-cover bg-center" style="background-image: linear-gradient(to top, #0a0a0a, rgba(10,10,10,0.6)), url('ramoz3.webp');">
         <div class="max-w-5xl w-full text-center z-10">
-            <p class="text-sm uppercase tracking-[0.3em] text-neutral-400 mb-3 animate-pulse">Mombasa's Finest Turntablist</p>
-            <h1 class="text-5xl md:text-8xl font-black tracking-tighter text-white mb-6">
+            <p class="text-sm uppercase tracking-[0.3em] text-neutral-400 mb-4">Mombasa's Elite Turntablist</p>
+            <h1 class="text-6xl md:text-9xl font-black tracking-tighter text-white mb-6">
                 DEEJAY<span class="text-gradient">RAMOZ</span>
             </h1>
-            <p class="text-neutral-400 max-w-xl mx-auto text-sm md:text-base mb-8 tracking-wide">
-                Bringing the ultimate sonic experience to the 254. Heavy basslines, seamless transitions, and pure energy.
+            <p class="text-neutral-400 max-w-xl mx-auto text-base md:text-lg mb-8 tracking-wide">
+                Experience the heavy club rhythms and unforgettable sonic architecture live from the coastal city.
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                <a href="#booking" class="w-full sm:w-auto bg-white text-black font-bold tracking-wider px-8 py-4 rounded-full hover:bg-neutral-200 transition-transform transform hover:scale-105 duration-300 text-center">
-                    SECURE A BOOKING
+                <a href="book-now/index.html" class="w-full sm:w-auto bg-white text-black font-bold tracking-wider px-8 py-4 rounded-full hover:bg-neutral-200 transition-transform transform hover:scale-105 duration-300 text-center">
+                    BOOK PERFORMANCE
                 </a>
-                <a href="https://wa.me/254701550953" target="_blank" class="w-full sm:w-auto border border-neutral-700 bg-black/40 backdrop-blur-sm text-white font-bold tracking-wider px-8 py-4 rounded-full hover:bg-neutral-900 transition-colors flex items-center justify-center gap-2">
-                    <i class="fa-brands fa-whatsapp text-green-500"></i> CHAT ON WHATSAPP
+                <a href="https://wa.me/254701550953" target="_blank" class="w-full sm:w-auto border border-neutral-800 bg-black/40 backdrop-blur-sm text-white font-bold tracking-wider px-8 py-4 rounded-full hover:bg-neutral-900 transition-colors flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp text-green-500"></i> LIVE CHAT
                 </a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 px-6 max-w-7xl mx-auto border-t border-neutral-900">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div class="grid grid-cols-2 gap-4">
-                <div class="overflow-hidden rounded-2xl bg-neutral-900 aspect-[3/4]">
-                    <img src="YOUR_IMAGE_1_URL_HERE" alt="Deejayramoz Studio" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                </div>
-                <div class="overflow-hidden rounded-2xl bg-neutral-900 aspect-[3/4] mt-8">
-                    <img src="YOUR_IMAGE_2_URL_HERE" alt="Deejayramoz Performance" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                </div>
-            </div>
-            
-            <div class="space-y-6">
-                <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white">THE MAN BEHIND THE DECKS</h2>
-                <div class="h-1 w-20 bg-white"></div>
-                <p class="text-neutral-400 leading-relaxed">
-                    Based out of Mombasa, Kenya, Deejayramoz is redefining the nightlife and event scene. Known for a signature visual branding and an unforgiving ear for curation, he blends high-energy club anthems with seamless performance delivery.
-                </p>
-                <p class="text-neutral-400 leading-relaxed">
-                    Whether it's a high-profile corporate event, a packed club night, or an exclusive private concert, Deejayramoz delivers tailored audio experiences that keep the crowd locked in from start to finish.
-                </p>
-                <div class="pt-4 space-y-3">
-                    <div class="flex items-center gap-3 text-neutral-300">
-                        <i class="fa-solid fa-location-dot text-white w-5"></i>
-                        <span>Mombasa, Kenya</span>
-                    </div>
-                    <div class="flex items-center gap-3 text-neutral-300">
-                        <i class="fa-solid fa-phone text-white w-5"></i>
-                        <a href="tel:+254701550953" class="hover:underline">0701 550 953 / +254 701 550 953</a>
-                    </div>
-                </div>
-            </div>
+    <footer class="bg-black py-10 px-6 border-t border-neutral-900 text-center space-y-4">
+        <div class="flex justify-center space-x-6 text-neutral-500 text-lg">
+            <a href="https://wa.me/254701550953" target="_blank" class="hover:text-white"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="tel:+254701550953" class="hover:text-white"><i class="fa-solid fa-phone"></i></a>
         </div>
-    </section>
-
-    <section id="music" class="py-24 bg-neutral-950 px-6 border-y border-neutral-900">
-        <div class="max-w-5xl mx-auto text-center space-y-4 mb-12">
-            <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white">LATEST MIXTAPES</h2>
-            <p class="text-neutral-400 max-w-md mx-auto text-sm">Stream his latest sets and live mixes straight from Mombasa.</p>
-        </div>
-        
-        <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex flex-col justify-between h-48">
-                <div>
-                    <span class="text-xs font-bold text-neutral-500 uppercase tracking-wider">Afrobeats & Amapiano</span>
-                    <h3 class="text-lg font-bold text-white mt-1">Mombasa Sunset Mix Vol. 1</h3>
-                </div>
-                <div class="flex items-center justify-between mt-4">
-                    <button class="bg-white text-black w-10 h-10 rounded-full flex items-center justify-center hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-play ml-1"></i>
-                    </button>
-                    <span class="text-xs text-neutral-400">45:20</span>
-                </div>
-            </div>
-            
-            <div class="bg-neutral-900 p-6 rounded-2xl border border-neutral-800 flex flex-col justify-between h-48">
-                <div>
-                    <span class="text-xs font-bold text-neutral-500 uppercase tracking-wider">Hip Hop & Dancehall</span>
-                    <h3 class="text-lg font-bold text-white mt-1">The Urban Lockdown Mix</h3>
-                </div>
-                <div class="flex items-center justify-between mt-4">
-                    <button class="bg-white text-black w-10 h-10 rounded-full flex items-center justify-center hover:scale-105 transition-transform">
-                        <i class="fa-solid fa-play ml-1"></i>
-                    </button>
-                    <span class="text-xs text-neutral-400">58:15</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="booking" class="py-24 px-6 max-w-4xl mx-auto">
-        <div class="text-center space-y-4 mb-12">
-            <h2 class="text-3xl md:text-5xl font-black tracking-tight text-white">BOOK DEEJAYRAMOZ</h2>
-            <p class="text-neutral-400 text-sm">Fill out the form below to secure his performance for your date.</p>
-        </div>
-
-        <form id="booking-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST" class="space-y-6 bg-neutral-950 p-8 md:p-12 rounded-3xl border border-neutral-900">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="space-y-2">
-                    <label class="text-xs font-bold uppercase tracking-wider text-neutral-400">Your Full Name</label>
-                    <input type="text" name="name" required class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neutral-500 transition-colors">
-                </div>
-                <div class="space-y-2">
-                    <label class="text-xs font-bold uppercase tracking-wider text-neutral-400">Email Address</label>
-                    <input type="email" name="email" required class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neutral-500 transition-colors">
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="space-y-2">
-                    <label class="text-xs font-bold uppercase tracking-wider text-neutral-400">Phone Number</label>
-                    <input type="tel" name="phone" required class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neutral-500 transition-colors">
-                </div>
-                <div class="space-y-2">
-                    <label class="text-xs font-bold uppercase tracking-wider text-neutral-400">Event Date</label>
-                    <input type="date" name="date" required class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neutral-500 transition-colorsColor">
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="space-y-2">
-                    <label class="text-xs font-bold uppercase tracking-wider text-neutral-400">Event Type</label>
-                    <select name="event_type" class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neutral-500 transition-colors">
-                        <option value="Club Night">Club Night / Lounge</option>
-                        <option value="Concert">Concert / Festival</option>
-                        <option value="Corporate">Corporate Event</option>
-                        <option value="Private Party">Private Party / Wedding</option>
-                    </select>
-                </div>
-                <div class="space-y-2">
-                    <label class="text-xs font-bold uppercase tracking-wider text-neutral-400">Event Location</label>
-                    <input type="text" name="location" placeholder="e.g., Nyali, Mombasa" required class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neutral-500 transition-colors">
-                </div>
-            </div>
-
-            <div class="space-y-2">
-                <label class="text-xs font-bold uppercase tracking-wider text-neutral-400">Additional Details / Message</label>
-                <textarea name="message" rows="4" placeholder="Tell us more about the event timeline, equipment provided, etc." class="w-full bg-neutral-900 border border-neutral-800 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-neutral-500 transition-colors resize-none"></textarea>
-            </div>
-
-            <button type="submit" class="w-full bg-white text-black font-bold tracking-widest py-4 rounded-xl hover:bg-neutral-200 transition-colors">
-                SUBMIT BOOKING REQUEST
-            </button>
-        </form>
-    </section>
-
-    <footer class="bg-black py-12 px-6 border-t border-neutral-900 text-center space-y-4">
-        <p class="text-sm font-bold tracking-widest text-white">DEEJAYRAMOZ</p>
-        <div class="flex justify-center space-x-6 text-neutral-400 text-lg">
-            <a href="https://wa.me/254701550953" target="_blank" class="hover:text-white transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" class="hover:text-white transition-colors"><i class="fa-brands fa-soundcloud"></i></a>
-            <a href="tel:+254701550953" class="hover:text-white transition-colors"><i class="fa-solid fa-phone"></i></a>
-        </div>
-        <p class="text-xs text-neutral-600">&copy; 2026 DEEJAYRAMOZ. All Rights Reserved. Crafted for the Culture.</p>
+        <p class="text-xs text-neutral-600">&copy; 2026 DEEJAYRAMOZ. Mombasa, KE. All Rights Reserved.</p>
     </footer>
 
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        function toggleMenu() {
+        menuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
-            document.body.classList.toggle('overflow-hidden');
-            // Toggle icon look between burger and X
-            const icon = menuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-xmark');
-        }
-
-        menuBtn.addEventListener('click', toggleMenu);
-        mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
+            menuBtn.querySelector('i').classList.toggle('fa-bars');
+            menuBtn.querySelector('i').classList.toggle('fa-xmark');
+        });
     </script>
 </body>
 </html>
